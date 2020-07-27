@@ -1,2 +1,2 @@
 # StudentManagment-DotNet-CSharp
-Student Management Application in .Net,C# and SQLserver 
+Student Management Application using .Net,C# and SQLserver 
