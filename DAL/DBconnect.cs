@@ -19,7 +19,7 @@ namespace DAL
              SQL sever objectExplorer -> <To your data base directoty> ->
              <right click and click on properties> ->
              search for "connecting string"
-             and make that string to like like belo string.
+             and make that string to like below string.
              */
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Student;Integrated Security=True;Connect Timeout=30;");
             return con;
