@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer
 {
+    /*As here all the classes are made in one file u can make them in diffrent 
+    file accoding to you convinience but them under same namespace.*/
+
     public class CourseEntity
     {
         public int CID { get; set; }

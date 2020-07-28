@@ -10,6 +10,15 @@ using EntityLayer;
 
 namespace DAL
 {
+    //My database Entity May not be same as yours 
+    /*
+    If u can make aal the same u can use the database file provided on the 
+    student managment folder.
+
+    I had used stored procedure if u want the queries to run and not familare with 
+    stored procedure there are two examples below comment out to show that you can refer them.
+    */
+
     public class studentDAL
     {
         SqlConnection con = null;
@@ -23,12 +32,19 @@ namespace DAL
             {
                 con = DBconnect.GetConnection();
                 con.Open();
+                //for query u can refer to below command or use the stored procedures
+
                 //string query = "insert into Course values(@cname,@fees,@dur)";
+
+                //Here I have used stored procedurs which you can get in in STUDEMTMANAGMENT folder
+
                 cmd = new SqlCommand("sp_coures", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@cname", en.Name);
                 cmd.Parameters.AddWithValue("@fees", en.Fees);
                 cmd.Parameters.AddWithValue("@dur", en.Duration);
+
+                //if u use query use below commands
 
                 //int res = cmd.ExecuteNonQuery();
                 //if (res > 0)
@@ -66,12 +82,19 @@ namespace DAL
             {
                 con = DBconnect.GetConnection();
                 con.Open();
+                //for query u can refer to below command or use the stored procedures
+
                 //string query = "insert into Teacher values(@name,@sub,@Quali)";
+
+                //Here I have used stored procedurs which you can get in in STUDEMTMANAGMENT folder
                 cmd = new SqlCommand("sp_teacher", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@name", en.Name);
                 cmd.Parameters.AddWithValue("@sub", en.Sbject);
                 cmd.Parameters.AddWithValue("@Quali", en.Qualification);
+
+                //if u use query use below commands
+
                 //int res = cmd.ExecuteNonQuery();
                 //if (res > 0)
                 //    return true;
