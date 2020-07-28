@@ -19,7 +19,16 @@ namespace DAL
              SQL sever objectExplorer -> <To your data base directoty> ->
              <right click and click on properties> ->
              search for "connecting string"
-             and make that string to like below string.
+             and make that string to look like below string.
+
+             ("Data Source=<use your db source eg.(localdb)\\MSSQLLocalDB>;
+             Initial Catalog=< data base name eg.Student >;
+             Integrated Security=True;
+             Connect Timeout=30;")
+
+             and put the string as shown below.
+
+
              */
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Student;Integrated Security=True;Connect Timeout=30;");
             return con;
