@@ -10,8 +10,9 @@ create table Course
 	Duration varchar(10) not null,
 )
 
-drop table Course
 
+
+--below here is the stored Procedure of course
 create proc sp_coures(@cname varchar(50),@fees bigint,@dur varchar(10),@cid int out)
 as
 begin
@@ -28,8 +29,10 @@ create table Teacher
 	Qualification varchar(50) not null,
 )
 
-drop table Teacher
 
+
+
+--below here is the stored Procedure of Teacher
 create proc sp_teacher(@name varchar(50),@sub varchar(50),@Quali varchar(50), @tid int out)
 as
 begin
@@ -58,8 +61,9 @@ create table studentInfo
 	RemFees bigint,
 )
 
-drop table studentInfo
 
+
+--below here is the stored Procedure of student
 create proc sp_StudentInfo(@fn varchar(30),@sn varchar(30),@ad varchar(50),@em varchar(30),@pin bigint,@con bigint,@sd varchar(30),@ed varchar(30),@cid int,@tid int,@col varchar(50),@fee bigint,@det varchar(50),@fp bigint,@rf bigint,@sid int out)
 as
 begin
@@ -67,6 +71,14 @@ begin
 	select @sid = @@IDENTITY
 end
 
-declare @id int
-exec sp_StudentInfo "ane","ss","add","sd",23,45,"23","4",7,1,"col",200,"dhdh",20,30,@id out
-print @id
+
+--These are just to check ------------
+--declare @id int
+--exec sp_StudentInfo "ane","ss","add","sd",23,45,"23","4",7,1,"col",200,"dhdh",20,30,@id out
+--print @id
+
+--To drop The table u can use following commands and refresh the database
+--drop table studentInfo
+--drop table Teacher
+--drop table Course
+

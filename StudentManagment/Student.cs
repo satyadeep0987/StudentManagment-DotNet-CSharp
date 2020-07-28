@@ -93,7 +93,7 @@ namespace StudentManagment
             st.College = cbCollege.SelectedItem.ToString();
             st.Fee = double.Parse(cbFee.Text);
             st.Details = txtDetail.Text;
-
+            
             try
             {
                 var res = bal.InsertStudent(st);
