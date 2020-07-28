@@ -126,5 +126,10 @@ namespace StudentManagment
         {
 
         }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

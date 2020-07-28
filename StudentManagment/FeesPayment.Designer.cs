@@ -146,6 +146,7 @@
             // 
             this.cbTotalFee.DataSource = this.courseBindingSource2;
             this.cbTotalFee.DisplayMember = "fees";
+            this.cbTotalFee.Enabled = false;
             this.cbTotalFee.FormattingEnabled = true;
             this.cbTotalFee.Location = new System.Drawing.Point(114, 115);
             this.cbTotalFee.Name = "cbTotalFee";
@@ -170,11 +171,13 @@
             this.txtCollege.Name = "txtCollege";
             this.txtCollege.Size = new System.Drawing.Size(121, 29);
             this.txtCollege.TabIndex = 23;
+            this.txtCollege.TextChanged += new System.EventHandler(this.txtCollege_TextChanged);
             // 
             // cbCourse
             // 
             this.cbCourse.DataSource = this.courseBindingSource2;
             this.cbCourse.DisplayMember = "CourseName";
+            this.cbCourse.Enabled = false;
             this.cbCourse.FormattingEnabled = true;
             this.cbCourse.Location = new System.Drawing.Point(461, 72);
             this.cbCourse.Name = "cbCourse";
@@ -376,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(775, 450);
+            this.ClientSize = new System.Drawing.Size(770, 450);
             this.Controls.Add(this.lblStudentFees);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.GbPayFee);

@@ -257,7 +257,7 @@
             this.pnPersonalINFO.Controls.Add(this.txtAddress);
             this.pnPersonalINFO.Controls.Add(this.lblAdress);
             this.pnPersonalINFO.Controls.Add(this.lblEmail);
-            this.pnPersonalINFO.Location = new System.Drawing.Point(12, 121);
+            this.pnPersonalINFO.Location = new System.Drawing.Point(0, 0);
             this.pnPersonalINFO.Name = "pnPersonalINFO";
             this.pnPersonalINFO.Size = new System.Drawing.Size(439, 276);
             this.pnPersonalINFO.TabIndex = 3;
@@ -347,6 +347,7 @@
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(121, 20);
             this.dtpStartDate.TabIndex = 23;
+            this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
             // 
             // lblTecher
             // 
@@ -468,6 +469,7 @@
             // 
             // pnEducation
             // 
+            this.pnEducation.Controls.Add(this.pnPersonalINFO);
             this.pnEducation.Controls.Add(this.cbFee);
             this.pnEducation.Controls.Add(this.btnPrevious);
             this.pnEducation.Controls.Add(this.label5);
@@ -526,8 +528,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(498, 446);
-            this.Controls.Add(this.pnPersonalINFO);
+            this.ClientSize = new System.Drawing.Size(522, 446);
             this.Controls.Add(this.pnEducation);
             this.Controls.Add(this.AddStudent);
             this.Name = "Stud";

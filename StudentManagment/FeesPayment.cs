@@ -91,5 +91,10 @@ namespace StudentManagment
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txtCollege_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
